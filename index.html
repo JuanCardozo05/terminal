@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Terminal Transportes | Transporte Moderno y Eficiente</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Estilos personalizados -->
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-bus"></i> Terminal Transportes
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#rutas">Rutas y Horarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#empresas">Empresas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#noticias">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#login" class="btn btn-outline-light me-2" data-bs-toggle="modal">
+                        <i class="fas fa-user"></i> Iniciar Sesión
+                    </a>
+                    <a href="#registro" class="btn btn-light" data-bs-toggle="modal">
+                        <i class="fas fa-user-plus"></i> Registrarse
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">Bienvenido a Terminal Transportes</h1>
+            <p class="lead mb-5">Tu puerta de entrada a miles de destinos con comodidad y seguridad</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-body p-4">
+                            <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-origen-tab" data-bs-toggle="pill" data-bs-target="#pills-origen" type="button">Comprar Pasaje</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-horarios-tab" data-bs-toggle="pill" data-bs-target="#pills-horarios" type="button">Consultar Horarios</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-rastreo-tab" data-bs-toggle="pill" data-bs-target="#pills-rastreo" type="button">Rastrear Bus</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-origen" role="tabpanel">
+                                    <form>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label for="origen" class="form-label">Origen</label>
+                                                <select class="form-select" id="origen">
+                                                    <option selected>Seleccione ciudad origen</option>
+                                                    <option>Bogota DC</option>
+                                                    <option>Cartagena</option>
+                                                    <option>Pasto</option>
+                                                    <option>Yopal</option>
+                                                    <option>Medellin</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="destino" class="form-label">Destino</label>
+                                                <select class="form-select" id="destino">
+                                                    <option selected>Seleccione ciudad destino</option>
+                                                    <option>Bogota DC</option>
+                                                    <option>Cartagena</option>
+                                                    <option>Pasto</option>
+                                                    <option>Yopal</option>
+                                                    <option>Medellin</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="fecha" class="form-label">Fecha de viaje</label>
+                                                <input type="date" class="form-control" id="fecha">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="pasajeros" class="form-label">Pasajeros</label>
+                                                <select class="form-select" id="pasajeros">
+                                                    <option selected>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5+</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 mt-3">
+                                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                                    <i class="fas fa-search"></i> Buscar Rutas
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                
+                                <div class="tab-pane fade" id="pills-horarios" role="tabpanel">
+                                    <form>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label for="empresa" class="form-label">Empresa de transporte</label>
+                                                <select class="form-select" id="empresa">
+                                                    <option selected>Todas las empresas</option>
+                                                    <option>Copetran</option>
+                                                    <option>Expreso Brasilia</option>
+                                                    <option>Berlinas del Fonce</option>
+                                                    <option>Expreso Bolivariano</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="ruta" class="form-label">Ruta específica</label>
+                                                <select class="form-select" id="ruta">
+                                                    <option selected>Todas las rutas</option>
+                                                    <option>Bogota - Cartagena</option>
+                                                    <option>Bogota - Pasto</option>
+                                                    <option>Bogota - Yopal</option>
+                                                    <option>Bogota - Medellin</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 mt-3">
+                                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                                    <i class="fas fa-clock"></i> Consultar Horarios
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                
+                                <div class="tab-pane fade" id="pills-rastreo" role="tabpanel">
+                                    <form>
+                                        <div class="row g-3">
+                                            <div class="col-md-8">
+                                                <label for="placa" class="form-label">Placa del bus o número de ruta</label>
+                                                <input type="text" class="form-control" id="placa" placeholder="Ej: ABC123 o Ruta 45">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="rastreo-btn" class="form-label invisible">Rastrear</label>
+                                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                                    <i class="fas fa-map-marker-alt"></i> Rastrear
+                                                </button>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="alert alert-info mt-3">
+                                                    <i class="fas fa-info-circle"></i> Ingrese la placa del vehículo o el número de ruta para ver su ubicación en tiempo real.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="display-4 fw-bold text-primary">50+</div>
+                    <p class="lead">Empresas asociadas</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="display-4 fw-bold text-primary">200+</div>
+                    <p class="lead">Rutas disponibles</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="display-4 fw-bold text-primary">1M+</div>
+                    <p class="lead">Pasajeros anuales</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="display-4 fw-bold text-primary">24/7</div>
+                    <p class="lead">Atención al cliente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rutas" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Rutas Populares</h2>
+                <p class="lead text-muted">Las rutas más solicitadas por nuestros pasajeros</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card ticket-card mb-4 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-primary">Express</span>
+                                <span class="text-muted">18h 30m</span>
+                            </div>
+                            <h4>Bogota DC → Cartagena</h4>
+                            <p class="text-muted">Salidas cada 30 minutos</p>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <div>
+                                    <span class="h4">$120.000</span>
+                                    <span class="text-muted d-block">por persona</span>
+                                </div>
+                                <button class="btn btn-outline-primary">Ver horarios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card ticket-card mb-4 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-success">Directo</span>
+                                <span class="text-muted">8h 15m</span>
+                            </div>
+                            <h4>Bogota DC → Yopal</h4>
+                            <p class="text-muted">Salidas cada hora</p>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <div>
+                                    <span class="h4">$90.000</span>
+                                    <span class="text-muted d-block">por persona</span>
+                                </div>
+                                <button class="btn btn-outline-primary">Ver horarios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card ticket-card mb-4 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-warning text-dark">Económico</span>
+                                <span class="text-muted">20h 00m</span>
+                            </div>
+                            <h4>Bogota DC → Pasto</h4>
+                            <p class="text-muted">Salidas cada 45 minutos</p>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <div>
+                                    <span class="h4">$165.000</span>
+                                    <span class="text-muted d-block">por persona</span>
+                                </div>
+                                <button class="btn btn-outline-primary">Ver horarios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary btn-lg">Ver todas las rutas <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de empresas asociadas -->
+    <section id="empresas" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Empresas Asociadas</h2>
+                <p class="lead text-muted">Confía en las mejores empresas de transporte</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/copetran.png" class="card-img-top" alt="Transporte Rápido">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Copetran</h5>
+                            <p class="card-text text-muted">Servicio express con las mejores unidades</p>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                                <span class="ms-1">4.5</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver rutas</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/expreso-brasilia.png" class="card-img-top" alt="Bus Express">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Expreso Brasilia</h5>
+                            <p class="card-text text-muted">Confort y puntualidad garantizada</p>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                                <span class="ms-1">4.0</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver rutas</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/berlinas.png" class="card-img-top" alt="Viaje Seguro">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Berlinas del Fonce</h5>
+                            <p class="card-text text-muted">La seguridad es nuestra prioridad</p>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <span class="ms-1">5.0</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver rutas</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/bolivariano.png" class="card-img-top" alt="Comfort Bus">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Expreso Bolivariano</h5>
+                            <p class="card-text text-muted">El máximo confort en tus viajes</p>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <span class="ms-1">5.0</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver rutas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary btn-lg">Ver todas las empresas <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de servicios -->
+    <section id="servicios" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Nuestros Servicios</h2>
+                <p class="lead text-muted">Todo lo que necesitas para un viaje perfecto</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card service-card h-100 shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-wifi fa-3x text-primary"></i>
+                            </div>
+                            <h4>WiFi Gratis</h4>
+                            <p class="text-muted">Conéctate durante tu espera y en algunas de nuestras rutas premium.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card service-card h-100 shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-suitcase-rolling fa-3x text-primary"></i>
+                            </div>
+                            <h4>Guardaequipajes</h4>
+                            <p class="text-muted">Servicio seguro de guardaequipajes por horas o días.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card service-card h-100 shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-utensils fa-3x text-primary"></i>
+                            </div>
+                            <h4>Zona de Comidas</h4>
+                            <p class="text-muted">Variedad de opciones gastronómicas para todos los gustos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card service-card h-100 shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-wheelchair fa-3x text-primary"></i>
+                            </div>
+                            <h4>Accesibilidad</h4>
+                            <p class="text-muted">Instalaciones y transporte adaptado para personas con movilidad reducida.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card service-card h-100 shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-baby-carriage fa-3x text-primary"></i>
+                            </div>
+                            <h4>Sala de Lactancia</h4>
+                            <p class="text-muted">Espacio privado y cómodo para madres lactantes.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card service-card h-100 shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                            </div>
+                            <h4>Seguridad 24/7</h4>
+                            <p class="text-muted">Vigilancia permanente y sistemas de monitoreo avanzados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de noticias y anuncios -->
+    <section id="noticias" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Noticias y Anuncios</h2>
+                <p class="lead text-muted">Mantente informado sobre novedades y cambios</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card news-card h-100 shadow-sm">
+                        <img src="img/nuevaruta.png" class="card-img-top" alt="Nueva Ruta">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Novedad</span>
+                            <h5 class="card-title">Lanzamiento de nueva ruta internacional</h5>
+                            <p class="card-text text-muted">A partir del próximo mes, tendremos conexión directa con el país vecino con salidas diarias.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">15 Junio 2024</small>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card news-card h-100 shadow-sm">
+                        <img src="img/temporada-baja.png" class="card-img-top" alt="Promoción">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Promoción</span>
+                            <h5 class="card-title">Descuentos especiales por temporada baja</h5>
+                            <p class="card-text text-muted">Aprovecha hasta 30% de descuento en rutas seleccionadas durante este mes.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">1 Octubre 2024</small>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card news-card h-100 shadow-sm">
+                        <img src="img/modernizacion.png" class="card-img-top" alt="Modernización">
+                        <div class="card-body">
+                            <span class="badge bg-info mb-2">Mejora</span>
+                            <h5 class="card-title">Modernización de nuestras plataformas</h5>
+                            <p class="card-text text-muted">Estamos renovando nuestras instalaciones para brindarte mayor comodidad y seguridad.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">20 Mayo 2024</small>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary btn-lg">Ver todas las noticias <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de testimonios -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Opiniones de Nuestros Usuarios</h2>
+                <p class="lead text-muted">Lo que dicen nuestros pasajeros sobre nosotros</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card border-0 shadow">
+                                    <div class="card-body p-5 text-center">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle mb-4" width="100" alt="Usuario">
+                                        <p class="lead mb-4">"Excelente servicio y puntualidad. Los buses son cómodos y modernos. Siempre viajo con ellos cuando visito a mi familia en otra ciudad."</p>
+                                        <div class="mb-3">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <h5 class="mb-1">María González</h5>
+                                        <p class="text-muted">Pasajera frecuente</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-item">
+                                <div class="card border-0 shadow">
+                                    <div class="card-body p-5 text-center">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle mb-4" width="100" alt="Usuario">
+                                        <p class="lead mb-4">"La terminal es muy organizada y segura. Me gusta que tienen muchas opciones de comida y áreas de descanso mientras espero mi bus."</p>
+                                        <div class="mb-3">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                        </div>
+                                        <h5 class="mb-1">Carlos Mendoza</h5>
+                                        <p class="text-muted">Viajero empresarial</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-item">
+                                <div class="card border-0 shadow">
+                                    <div class="card-body p-5 text-center">
+                                        <img src="https://randomuser.me/api/portraits/women/24.jpg" class="rounded-circle mb-4" width="100" alt="Usuario">
+                                        <p class="lead mb-4">"La app para comprar boletos es muy fácil de usar y me ahorra tiempo. Además, el personal siempre está dispuesto a ayudar cuando lo necesito."</p>
+                                        <div class="mb-3">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="far fa-star text-warning"></i>
+                                        </div>
+                                        <h5 class="mb-1">Laura Jiménez</h5>
+                                        <p class="text-muted">Estudiante universitaria</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon bg-primary rounded-circle"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon bg-primary rounded-circle"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto y mapa -->
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Contáctanos</h2>
+                    <p class="lead mb-5">Estamos aquí para ayudarte. Visítanos o contáctanos por cualquiera de estos medios.</p>
+                    
+                    <div class="mb-4">
+                        <h5><i class="fas fa-map-marker-alt text-primary me-2"></i> Dirección</h5>
+                        <p class="ms-4">Avenida ## N° ## - ##, Bogota DC</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5><i class="fas fa-phone-alt text-primary me-2"></i> Teléfonos</h5>
+                        <ul class="ms-4 list-unstyled">
+                            <li>Atención al cliente: (###) ###-####</li>
+                            <li>Información de rutas: (###) ###-####</li>
+                            <li>Emergencias: (###) ###-####</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5><i class="fas fa-envelope text-primary me-2"></i> Correo Electrónico</h5>
+                        <p class="ms-4">info@terminaltrans.com</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5><i class="fas fa-clock text-primary me-2"></i> Horario de Atención</h5>
+                        <p class="ms-4">Lunes a Domingo: 5:00 am - 11:00 pm</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card shadow">
+                        <div class="card-body p-4">
+                            <h4 class="mb-4">Envía un mensaje</h4>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre completo</label>
+                                    <input type="text" class="form-control" id="nombre" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="asunto" class="form-label">Asunto</label>
+                                    <select class="form-select" id="asunto">
+                                        <option selected>Seleccione un asunto</option>
+                                        <option>Consulta general</option>
+                                        <option>Reclamo</option>
+                                        <option>Sugerencia</option>
+                                        <option>Información de rutas</option>
+                                        <option>Otro</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="map-container rounded shadow">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.455530462445!2d-74.09372292401974!3d4.683652942081986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a3a0e9b4c3b%3A0x4a7f8e9b9c1d1e1f!2sTerminal%20de%20Transporte%20de%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1620000000000!5m2!1ses!2sco" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <hr>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="text-white mb-4">
+                        <i class="fas fa-bus"></i> Terminal Transportes
+                    </h5>
+                    <p>La terminal de transporte más moderna y completa de la región, conectando destinos con seguridad, comodidad y eficiencia.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h5 class="text-white mb-4">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Preguntas Frecuentes</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Términos y Condiciones</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Política de Privacidad</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Trabaja con Nosotros</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Mapa del Sitio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h5 class="text-white mb-4">Descarga Nuestra App</h5>
+                    <p>Compra boletos, consulta horarios y recibe notificaciones en tiempo real.</p>
+                    <div class="d-flex flex-column">
+                        <a href="#" class="btn btn-dark mb-2">
+                            <i class="fab fa-google-play me-2"></i> Google Play
+                        </a>
+                        <a href="#" class="btn btn-dark">
+                            <i class="fab fa-app-store me-2"></i> App Store
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h5 class="text-white mb-4">Boletín Informativo</h5>
+                    <p>Suscríbete para recibir promociones y novedades.</p>
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-secondary">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Terminal Transportes. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Desarrollado por <a href="#" class="text-white">########</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Inicio de Sesión -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Recordarme</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal" data-bs-dismiss="modal">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <hr>
+                    <p class="text-center">¿No tienes una cuenta? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Regístrate aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Crear Cuenta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">Nombres</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="registerEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="phoneNumber">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="acceptTerms" required>
+                            <label class="form-check-label" for="acceptTerms">Acepto los <a href="#">términos y condiciones</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+                    </form>
+                    <hr>
+                    <p class="text-center">¿Ya tienes una cuenta? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Inicia sesión aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Recuperación de Contraseña -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel">Recuperar Contraseña</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-4">
+                            <p>Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="recoveryEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="recoveryEmail" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Enviar Enlace</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Volver a Iniciar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Compra de Boletos -->
+    <div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ticketModalLabel">Confirmar Compra</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Detalles del Viaje</h6>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-bold">Origen:</span>
+                                        <span>Bogota DC</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-bold">Destino:</span>
+                                        <span>Cartagena/span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-bold">Fecha:</span>
+                                        <span>15 Junio 2023</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-bold">Hora:</span>
+                                        <span>08:30 AM</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-bold">Duración:</span>
+                                        <span>3h 30m</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="fw-bold">Empresa:</span>
+                                        <span>Copetran</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h6>Información de Pasajeros</h6>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label for="passengerName" class="form-label">Nombre Completo</label>
+                                        <input type="text" class="form-control" id="passengerName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="passengerId" class="form-label">Documento de Identidad</label>
+                                        <input type="text" class="form-control" id="passengerId" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="seatNumber" class="form-label">Asiento</label>
+                                        <select class="form-select" id="seatNumber" required>
+                                            <option value="" selected disabled>Seleccionar asiento</option>
+                                            <option>1A</option>
+                                            <option>2B</option>
+                                            <option>3C</option>
+                                            <option>4D</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <h6>Resumen de Pago</h6>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Pasaje adulto x1</span>
+                                        <span>$25.000</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Seguro de viaje</span>
+                                        <span>$2.500</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Tarifa de servicio</span>
+                                        <span>$1.000</span>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between fw-bold">
+                                        <span>Total a pagar</span>
+                                        <span>$28.500</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h6>Método de Pago</h6>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                                            <label class="form-check-label" for="creditCard">
+                                                Tarjeta de Crédito/Débito
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="pse">
+                                            <label class="form-check-label" for="pse">
+                                                PSE
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="cash">
+                                            <label class="form-check-label" for="cash">
+                                                Efectivo en Terminal
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="creditCardForm">
+                                        <div class="mb-3">
+                                            <label for="cardNumber" class="form-label">Número de Tarjeta</label>
+                                            <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="expiryDate" class="form-label">Fecha de Expiración</label>
+                                                <input type="text" class="form-control" id="expiryDate" placeholder="MM/AA">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="cvv" class="form-label">CVV</label>
+                                                <input type="text" class="form-control" id="cvv" placeholder="123">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cardName" class="form-label">Nombre en la Tarjeta</label>
+                                            <input type="text" class="form-control" id="cardName">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="saveCard">
+                                        <label class="form-check-label" for="saveCard">
+                                            Guardar información de tarjeta para futuras compras
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal" onclick="alert('Compra realizada con éxito!')">
+                                Confirmar y Pagar
+                            </button>
+                            <p class="text-muted small mt-2">
+                                <i class="fas fa-lock"></i> Tu información está protegida con encriptación SSL.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts personalizados -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+
