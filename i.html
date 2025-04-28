@@ -20,7 +20,9 @@
             <a class="navbar-brand" href="#">
                 <i class="fas fa-bus"></i> Terminal Transportes
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -54,7 +56,7 @@
     </nav>
 
     <!-- Sección Hero -->
-    <section id="inicio" class="hero-section text-center">
+    <main id="inicio" class="hero-section text-center">
         <div class="container">
             <h1 class="display-3 fw-bold mb-4">Bienvenido a Terminal Transportes</h1>
             <p class="lead mb-5">Tu puerta de entrada a miles de destinos con comodidad y seguridad</p>
@@ -65,17 +67,33 @@
                         <div class="card-body p-4">
                             <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="pills-origen-tab" data-bs-toggle="pill" data-bs-target="#pills-origen" type="button">Comprar Pasaje</button>
+                                    <button class="nav-link active" id="pills-origen-tab" 
+                                            data-bs-toggle="pill" 
+                                            data-bs-target="#pills-origen" 
+                                            type="button">
+                                        Comprar Pasaje
+                                    </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-horarios-tab" data-bs-toggle="pill" data-bs-target="#pills-horarios" type="button">Consultar Horarios</button>
+                                    <button class="nav-link" id="pills-horarios-tab" 
+                                            data-bs-toggle="pill" 
+                                            data-bs-target="#pills-horarios" 
+                                            type="button">
+                                        Consultar Horarios
+                                    </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-rastreo-tab" data-bs-toggle="pill" data-bs-target="#pills-rastreo" type="button">Rastrear Bus</button>
+                                    <button class="nav-link" id="pills-rastreo-tab" 
+                                            data-bs-toggle="pill" 
+                                            data-bs-target="#pills-rastreo" 
+                                            type="button">
+                                        Rastrear Bus
+                                    </button>
                                 </li>
                             </ul>
 
                             <div class="tab-content" id="pills-tabContent">
+                                <!-- Pestaña Comprar Pasaje -->
                                 <div class="tab-pane fade show active" id="pills-origen" role="tabpanel">
                                     <form action="Rutas.html" method="get">
                                         <div class="row g-3">
@@ -124,6 +142,7 @@
                                     </form>
                                 </div>
 
+                                <!-- Pestaña Consultar Horarios -->
                                 <div class="tab-pane fade" id="pills-horarios" role="tabpanel">
                                     <form>
                                         <div class="row g-3">
@@ -156,6 +175,7 @@
                                     </form>
                                 </div>
 
+                                <!-- Pestaña Rastrear Bus -->
                                 <div class="tab-pane fade" id="pills-rastreo" role="tabpanel">
                                     <form>
                                         <div class="row g-3">
@@ -183,7 +203,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Sección de Estadísticas -->
     <section class="py-5 bg-light stats-section">
@@ -209,7 +229,7 @@
         </div>
     </section>
 
-    <!-- Sección de Rutas -->
+    <!-- Sección de Rutas Populares -->
     <section id="rutas" class="py-5 routes-section">
         <div class="container">
             <div class="text-center mb-5">
@@ -217,78 +237,19 @@
                 <p class="lead text-muted">Las rutas más solicitadas por nuestros pasajeros</p>
             </div>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card ticket-card mb-4 shadow-sm h-100">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between mb-3">
-                                <span class="badge bg-primary">Express</span>
-                                <span class="text-muted">18h 30m</span>
-                            </div>
-                            <h4>Bogota DC → Cartagena</h4>
-                            <p class="text-muted">Salidas cada 30 minutos</p>
-
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <div>
-                                    <span class="h4">$120.000</span>
-                                    <span class="text-muted d-block">por persona</span>
-                                </div>
-                                <button class="btn btn-outline-primary">Ver horarios</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card ticket-card mb-4 shadow-sm h-100">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between mb-3">
-                                <span class="badge bg-success">Directo</span>
-                                <span class="text-muted">8h 15m</span>
-                            </div>
-                            <h4>Bogota DC → Yopal</h4>
-                            <p class="text-muted">Salidas cada hora</p>
-
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <div>
-                                    <span class="h4">$90.000</span>
-                                    <span class="text-muted d-block">por persona</span>
-                                </div>
-                                <button class="btn btn-outline-primary">Ver horarios</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card ticket-card mb-4 shadow-sm h-100">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between mb-3">
-                                <span class="badge bg-warning text-dark">Económico</span>
-                                <span class="text-muted">20h 00m</span>
-                            </div>
-                            <h4>Bogota DC → Pasto</h4>
-                            <p class="text-muted">Salidas cada 45 minutos</p>
-
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <div>
-                                    <span class="h4">$165.000</span>
-                                    <span class="text-muted d-block">por persona</span>
-                                </div>
-                                <button class="btn btn-outline-primary">Ver horarios</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row" id="rutasContainer">
+                <!-- Rutas se cargarán dinámicamente aquí -->
             </div>
 
             <div class="text-center mt-4">
-                <a href="Rutas.html" class="btn btn-primary btn-lg">Ver todas las rutas <i class="fas fa-arrow-right ms-2"></i></a>
+                <a href="Rutas.html" class="btn btn-primary btn-lg">
+                    Ver todas las rutas <i class="fas fa-arrow-right ms-2"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Empresas -->
+    <!-- Sección de Empresas Asociadas -->
     <section id="empresas" class="py-5 bg-light companies-section">
         <div class="container">
             <div class="text-center mb-5">
@@ -297,12 +258,12 @@
             </div>
 
             <div class="row g-4">
+                <!-- Tarjeta Copetran -->
                 <div class="col-md-3 col-sm-6">
-                    <div class="card h-100 shadow-sm">
-                        <img src="img/copetran.png" class="card-img-top" alt="Transporte Rápido">
+                    <article class="card h-100 shadow-sm">
+                        <img src="img/copetran.png" class="card-img-top" alt="Logo Copetran">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Copetran</h5>
-                            <p class="card-text text-muted">Servicio express con las mejores unidades</p>
+                            <h3 class="card-title">Copetran</h3>
                             <div class="mb-2">
                                 <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning"></i>
@@ -311,17 +272,22 @@
                                 <i class="fas fa-star-half-alt text-warning"></i>
                                 <span class="ms-1">4.5</span>
                             </div>
-                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalRutas">Ver rutas</a>
+                            <p class="card-text text-muted">Servicio express con las mejores unidades</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" 
+                               data-bs-toggle="modal" 
+                               data-bs-target="#modalRutas">
+                                Ver rutas
+                            </a>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
+                <!-- Tarjeta Expreso Brasilia -->
                 <div class="col-md-3 col-sm-6">
-                    <div class="card h-100 shadow-sm">
-                        <img src="img/expreso-brasilia.png" class="card-img-top" alt="Bus Express">
+                    <article class="card h-100 shadow-sm">
+                        <img src="img/expreso-brasilia.png" class="card-img-top" alt="Logo Expreso Brasilia">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Expreso Brasilia</h5>
-                            <p class="card-text text-muted">Confort y puntualidad garantizada</p>
+                            <h3 class="card-title">Expreso Brasilia</h3>
                             <div class="mb-2">
                                 <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning"></i>
@@ -330,36 +296,46 @@
                                 <i class="far fa-star text-warning"></i>
                                 <span class="ms-1">4.0</span>
                             </div>
-                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalBrasilia">Ver rutas</a>
+                            <p class="card-text text-muted">Confort y puntualidad garantizada</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" 
+                               data-bs-toggle="modal" 
+                               data-bs-target="#modalBrasilia">
+                                Ver rutas
+                            </a>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
+                <!-- Tarjeta Berlinas del Fonce -->
                 <div class="col-md-3 col-sm-6">
-                    <div class="card h-100 shadow-sm">
-                        <img src="img/berlinas.png" class="card-img-top" alt="Viaje Seguro">
+                    <article class="card h-100 shadow-sm">
+                        <img src="img/berlinas.png" class="card-img-top" alt="Logo Berlinas del Fonce">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Berlinas del Fonce</h5>
+                            <h3 class="card-title">Berlinas del Fonce</h3>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <span class="ms-1">5.0</span>
+                            </div>
                             <p class="card-text text-muted">La seguridad es nuestra prioridad</p>
-                            <div class="mb-2">
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <span class="ms-1">5.0</span>
-                            </div>
-                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalBerlinas">Ver rutas</a>
+                            <a href="#" class="btn btn-sm btn-outline-primary" 
+                               data-bs-toggle="modal" 
+                               data-bs-target="#modalBerlinas">
+                                Ver rutas
+                            </a>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
+                <!-- Tarjeta Expreso Bolivariano -->
                 <div class="col-md-3 col-sm-6">
-                    <div class="card h-100 shadow-sm">
-                        <img src="img/bolivariano.png" class="card-img-top" alt="Comfort Bus">
+                    <article class="card h-100 shadow-sm">
+                        <img src="img/bolivariano.png" class="card-img-top" alt="Logo Expreso Bolivariano">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Expreso Bolivariano</h5>
-                            <p class="card-text text-muted">El máximo confort en tus viajes</p>
+                            <h3 class="card-title">Expreso Bolivariano</h3>
                             <div class="mb-2">
                                 <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning"></i>
@@ -368,14 +344,21 @@
                                 <i class="fas fa-star text-warning"></i>
                                 <span class="ms-1">5.0</span>
                             </div>
-                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalBolivariano">Ver rutas</a>
+                            <p class="card-text text-muted">El máximo confort en tus viajes</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" 
+                               data-bs-toggle="modal" 
+                               data-bs-target="#modalBolivariano">
+                                Ver rutas
+                            </a>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
 
             <div class="text-center mt-4">
-                <a href="empresas.html" class="btn btn-outline-primary btn-lg">Ver todas las empresas <i class="fas fa-arrow-right ms-2"></i></a>
+                <a href="empresas.html" class="btn btn-outline-primary btn-lg">
+                    Ver todas las empresas <i class="fas fa-arrow-right ms-2"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -389,76 +372,82 @@
             </div>
 
             <div class="row g-4">
+                <!-- Servicio WiFi -->
                 <div class="col-md-4">
-                    <div class="card service-card h-100 shadow">
+                    <article class="card service-card h-100 shadow">
                         <div class="card-body text-center p-4">
                             <div class="mb-3">
                                 <i class="fas fa-wifi fa-3x text-primary"></i>
                             </div>
-                            <h4>WiFi Gratis</h4>
+                            <h3>WiFi Gratis</h3>
                             <p class="text-muted">Conéctate durante tu espera y en algunas de nuestras rutas premium.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
+                <!-- Servicio Guardaequipajes -->
                 <div class="col-md-4">
-                    <div class="card service-card h-100 shadow">
+                    <article class="card service-card h-100 shadow">
                         <div class="card-body text-center p-4">
                             <div class="mb-3">
                                 <i class="fas fa-suitcase-rolling fa-3x text-primary"></i>
                             </div>
-                            <h4>Guardaequipajes</h4>
+                            <h3>Guardaequipajes</h3>
                             <p class="text-muted">Servicio seguro de guardaequipajes por horas o días.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
+                <!-- Servicio Zona de Comidas -->
                 <div class="col-md-4">
-                    <div class="card service-card h-100 shadow">
+                    <article class="card service-card h-100 shadow">
                         <div class="card-body text-center p-4">
                             <div class="mb-3">
                                 <i class="fas fa-utensils fa-3x text-primary"></i>
                             </div>
-                            <h4>Zona de Comidas</h4>
+                            <h3>Zona de Comidas</h3>
                             <p class="text-muted">Variedad de opciones gastronómicas para todos los gustos.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
+                <!-- Servicio Accesibilidad -->
                 <div class="col-md-4">
-                    <div class="card service-card h-100 shadow">
+                    <article class="card service-card h-100 shadow">
                         <div class="card-body text-center p-4">
                             <div class="mb-3">
                                 <i class="fas fa-wheelchair fa-3x text-primary"></i>
                             </div>
-                            <h4>Accesibilidad</h4>
+                            <h3>Accesibilidad</h3>
                             <p class="text-muted">Instalaciones y transporte adaptado para personas con movilidad reducida.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
+                <!-- Servicio Sala de Lactancia -->
                 <div class="col-md-4">
-                    <div class="card service-card h-100 shadow">
+                    <article class="card service-card h-100 shadow">
                         <div class="card-body text-center p-4">
                             <div class="mb-3">
                                 <i class="fas fa-baby-carriage fa-3x text-primary"></i>
                             </div>
-                            <h4>Sala de Lactancia</h4>
+                            <h3>Sala de Lactancia</h3>
                             <p class="text-muted">Espacio privado y cómodo para madres lactantes.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
+                <!-- Servicio Seguridad -->
                 <div class="col-md-4">
-                    <div class="card service-card h-100 shadow">
+                    <article class="card service-card h-100 shadow">
                         <div class="card-body text-center p-4">
                             <div class="mb-3">
                                 <i class="fas fa-shield-alt fa-3x text-primary"></i>
                             </div>
-                            <h4>Seguridad 24/7</h4>
+                            <h3>Seguridad 24/7</h3>
                             <p class="text-muted">Vigilancia permanente y sistemas de monitoreo avanzados.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -473,54 +462,59 @@
             </div>
 
             <div class="row g-4">
+                <!-- Noticia Nueva Ruta -->
                 <div class="col-md-4">
-                    <div class="card news-card h-100 shadow-sm">
+                    <article class="card news-card h-100 shadow-sm">
                         <img src="img/nuevaruta.png" class="card-img-top" alt="Nueva Ruta">
                         <div class="card-body">
                             <span class="badge bg-success mb-2">Novedad</span>
-                            <h5 class="card-title">Lanzamiento de nueva ruta internacional</h5>
+                            <h3 class="card-title">Lanzamiento de nueva ruta internacional</h3>
                             <p class="card-text text-muted">A partir del próximo mes, tendremos conexión directa con el país vecino con salidas diarias.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <small class="text-muted">15 Junio 2024</small>
                                 <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
+                <!-- Noticia Promoción -->
                 <div class="col-md-4">
-                    <div class="card news-card h-100 shadow-sm">
+                    <article class="card news-card h-100 shadow-sm">
                         <img src="img/temporada-baja.png" class="card-img-top" alt="Promoción">
                         <div class="card-body">
                             <span class="badge bg-warning text-dark mb-2">Promoción</span>
-                            <h5 class="card-title">Descuentos especiales por temporada baja</h5>
+                            <h3 class="card-title">Descuentos especiales por temporada baja</h3>
                             <p class="card-text text-muted">Aprovecha hasta 30% de descuento en rutas seleccionadas durante este mes.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <small class="text-muted">1 Octubre 2024</small>
                                 <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
+                <!-- Noticia Modernización -->
                 <div class="col-md-4">
-                    <div class="card news-card h-100 shadow-sm">
+                    <article class="card news-card h-100 shadow-sm">
                         <img src="img/modernizacion.png" class="card-img-top" alt="Modernización">
                         <div class="card-body">
                             <span class="badge bg-info mb-2">Mejora</span>
-                            <h5 class="card-title">Modernización de nuestras plataformas</h5>
+                            <h3 class="card-title">Modernización de nuestras plataformas</h3>
                             <p class="card-text text-muted">Estamos renovando nuestras instalaciones para brindarte mayor comodidad y seguridad.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <small class="text-muted">20 Mayo 2024</small>
                                 <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
 
             <div class="text-center mt-4">
-                <a href="#noticias" class="btn btn-outline-primary btn-lg">Ver todas las noticias <i class="fas fa-arrow-right ms-2"></i></a>
+                <a href="#noticias" class="btn btn-outline-primary btn-lg">
+                    Ver todas las noticias <i class="fas fa-arrow-right ms-2"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -537,10 +531,14 @@
                 <div class="col-lg-8 mx-auto">
                     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
+                            <!-- Testimonio 1 -->
                             <div class="carousel-item active">
-                                <div class="card border-0 shadow">
+                                <article class="card border-0 shadow">
                                     <div class="card-body p-5 text-center">
-                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle mb-4" width="100" alt="Usuario">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" 
+                                             class="rounded-circle mb-4" 
+                                             width="100" 
+                                             alt="Foto de María González">
                                         <p class="lead mb-4">"Excelente servicio y puntualidad. Los buses son cómodos y modernos. Siempre viajo con ellos cuando visito a mi familia en otra ciudad."</p>
                                         <div class="mb-3">
                                             <i class="fas fa-star text-warning"></i>
@@ -549,16 +547,20 @@
                                             <i class="fas fa-star text-warning"></i>
                                             <i class="fas fa-star text-warning"></i>
                                         </div>
-                                        <h5 class="mb-1">María González</h5>
+                                        <h3 class="mb-1">María González</h3>
                                         <p class="text-muted">Pasajera frecuente</p>
                                     </div>
-                                </div>
+                                </article>
                             </div>
 
+                            <!-- Testimonio 2 -->
                             <div class="carousel-item">
-                                <div class="card border-0 shadow">
+                                <article class="card border-0 shadow">
                                     <div class="card-body p-5 text-center">
-                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle mb-4" width="100" alt="Usuario">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                                             class="rounded-circle mb-4" 
+                                             width="100" 
+                                             alt="Foto de Carlos Mendoza">
                                         <p class="lead mb-4">"La terminal es muy organizada y segura. Me gusta que tienen muchas opciones de comida y áreas de descanso mientras espero mi bus."</p>
                                         <div class="mb-3">
                                             <i class="fas fa-star text-warning"></i>
@@ -567,16 +569,20 @@
                                             <i class="fas fa-star text-warning"></i>
                                             <i class="fas fa-star-half-alt text-warning"></i>
                                         </div>
-                                        <h5 class="mb-1">Carlos Mendoza</h5>
+                                        <h3 class="mb-1">Carlos Mendoza</h3>
                                         <p class="text-muted">Viajero empresarial</p>
                                     </div>
-                                </div>
+                                </article>
                             </div>
 
+                            <!-- Testimonio 3 -->
                             <div class="carousel-item">
-                                <div class="card border-0 shadow">
+                                <article class="card border-0 shadow">
                                     <div class="card-body p-5 text-center">
-                                        <img src="https://randomuser.me/api/portraits/women/24.jpg" class="rounded-circle mb-4" width="100" alt="Usuario">
+                                        <img src="https://randomuser.me/api/portraits/women/24.jpg" 
+                                             class="rounded-circle mb-4" 
+                                             width="100" 
+                                             alt="Foto de Laura Jiménez">
                                         <p class="lead mb-4">"La app para comprar boletos es muy fácil de usar y me ahorra tiempo. Además, el personal siempre está dispuesto a ayudar cuando lo necesito."</p>
                                         <div class="mb-3">
                                             <i class="fas fa-star text-warning"></i>
@@ -585,18 +591,22 @@
                                             <i class="fas fa-star text-warning"></i>
                                             <i class="far fa-star text-warning"></i>
                                         </div>
-                                        <h5 class="mb-1">Laura Jiménez</h5>
+                                        <h3 class="mb-1">Laura Jiménez</h3>
                                         <p class="text-muted">Estudiante universitaria</p>
                                     </div>
-                                </div>
+                                </article>
                             </div>
                         </div>
 
-                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" 
+                                data-bs-target="#testimonialCarousel" 
+                                data-bs-slide="prev">
                             <span class="carousel-control-prev-icon bg-primary rounded-circle"></span>
                             <span class="visually-hidden">Anterior</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" 
+                                data-bs-target="#testimonialCarousel" 
+                                data-bs-slide="next">
                             <span class="carousel-control-next-icon bg-primary rounded-circle"></span>
                             <span class="visually-hidden">Siguiente</span>
                         </button>
@@ -615,12 +625,12 @@
                     <p class="lead mb-5">Estamos aquí para ayudarte. Visítanos o contáctanos por cualquiera de estos medios.</p>
 
                     <div class="mb-4">
-                        <h5><i class="fas fa-map-marker-alt text-primary me-2"></i> Dirección</h5>
+                        <h3><i class="fas fa-map-marker-alt text-primary me-2"></i> Dirección</h3>
                         <p class="ms-4">Avenida ## N° ## - ##, Bogota DC</p>
                     </div>
 
                     <div class="mb-4">
-                        <h5><i class="fas fa-phone-alt text-primary me-2"></i> Teléfonos</h5>
+                        <h3><i class="fas fa-phone-alt text-primary me-2"></i> Teléfonos</h3>
                         <ul class="ms-4 list-unstyled">
                             <li>Atención al cliente: (###) ###-####</li>
                             <li>Información de rutas: (###) ###-####</li>
@@ -629,12 +639,12 @@
                     </div>
 
                     <div class="mb-4">
-                        <h5><i class="fas fa-envelope text-primary me-2"></i> Correo Electrónico</h5>
+                        <h3><i class="fas fa-envelope text-primary me-2"></i> Correo Electrónico</h3>
                         <p class="ms-4">info@terminaltrans.com</p>
                     </div>
 
                     <div class="mb-4">
-                        <h5><i class="fas fa-clock text-primary me-2"></i> Horario de Atención</h5>
+                        <h3><i class="fas fa-clock text-primary me-2"></i> Horario de Atención</h3>
                         <p class="ms-4">Lunes a Domingo: 5:00 am - 11:00 pm</p>
                     </div>
                 </div>
@@ -642,7 +652,7 @@
                 <div class="col-lg-6">
                     <div class="card shadow">
                         <div class="card-body p-4">
-                            <h4 class="mb-4">Envía un mensaje</h4>
+                            <h3 class="mb-4">Envía un mensaje</h3>
                             <form>
                                 <div class="mb-3">
                                     <label for="nombre" class="form-label">Nombre completo</label>
@@ -677,7 +687,14 @@
             <div class="row mt-5">
                 <div class="col-12">
                     <div class="map-container rounded shadow">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.455530462445!2d-74.09372292401974!3d4.683652942081986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a3a0e9b4c3b%3A0x4a7f8e9b9c1d1e1f!2sTerminal%20de%20Transporte%20de%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1620000000000!5m2!1ses!2sco" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.455530462445!2d-74.09372292401974!3d4.683652942081986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a3a0e9b4c3b%3A0x4a7f8e9b9c1d1e1f!2sTerminal%20de%20Transporte%20de%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1620000000000!5m2!1ses!2sco" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                title="Mapa de ubicación de Terminal Transportes">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -690,20 +707,20 @@
             <div class="row">
                 <hr>
                 <div class="col-lg-3 mb-4">
-                    <h5 class="text-white mb-4">
+                    <h3 class="text-white mb-4">
                         <i class="fas fa-bus"></i> Terminal Transportes
-                    </h5>
+                    </h3>
                     <p>La terminal de transporte más moderna y completa de la región, conectando destinos con seguridad, comodidad y eficiencia.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-3 mb-4">
-                    <h5 class="text-white mb-4">Enlaces Rápidos</h5>
+                    <h3 class="text-white mb-4">Enlaces Rápidos</h3>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="#" class="text-white-50">Preguntas Frecuentes</a></li>
                         <li class="mb-2"><a href="#" class="text-white-50">Términos y Condiciones</a></li>
@@ -714,7 +731,7 @@
                 </div>
 
                 <div class="col-lg-3 mb-4">
-                    <h5 class="text-white mb-4">Descarga Nuestra App</h5>
+                    <h3 class="text-white mb-4">Descarga Nuestra App</h3>
                     <p>Compra boletos, consulta horarios y recibe notificaciones en tiempo real.</p>
                     <div class="d-flex flex-column">
                         <a href="#" class="btn btn-dark mb-2">
@@ -727,7 +744,7 @@
                 </div>
 
                 <div class="col-lg-3 mb-4">
-                    <h5 class="text-white mb-4">Boletín Informativo</h5>
+                    <h3 class="text-white mb-4">Boletín Informativo</h3>
                     <p>Suscríbete para recibir promociones y novedades.</p>
                     <form>
                         <div class="mb-3">
@@ -757,8 +774,8 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Iniciar Sesión</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h3 class="modal-title">Iniciar Sesión</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -778,10 +795,8 @@
                     </form>
                     <div class="text-center mt-3">
                         <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal" data-bs-dismiss="modal">¿Olvidaste tu contraseña?</a>
-                    </div> 
-
+                    </div>
                     <hr>
-                    
                 </div>
             </div>
         </div>
@@ -792,8 +807,8 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Crear Cuenta</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h3 class="modal-title">Crear Cuenta</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -827,7 +842,6 @@
                             <input type="checkbox" class="form-check-input" id="acceptTerms" required>
                             <label class="form-check-label" for="acceptTerms">Acepto los <a href="#">términos y condiciones</a></label>
                         </div>
-                        
                     </form>
                     
                     <p class="text-center">¿Ya tienes una cuenta? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Inicia sesión aquí</a></p>
@@ -841,8 +855,8 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Recuperar Contraseña</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h3 class="modal-title">Recuperar Contraseña</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -868,13 +882,13 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Confirmar Compra</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h3 class="modal-title">Confirmar Compra</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <h6>Detalles del Viaje</h6>
+                            <h4>Detalles del Viaje</h4>
                             <div class="card mb-3">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between mb-2">
@@ -904,7 +918,7 @@
                                 </div>
                             </div>
 
-                            <h6>Información de Pasajeros</h6>
+                            <h4>Información de Pasajeros</h4>
                             <div class="card">
                                 <div class="card-body">
                                     <div class="mb-3">
@@ -930,7 +944,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <h6>Resumen de Pago</h6>
+                            <h4>Resumen de Pago</h4>
                             <div class="card mb-3">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between mb-2">
@@ -953,7 +967,7 @@
                                 </div>
                             </div>
 
-                            <h6>Método de Pago</h6>
+                            <h4>Método de Pago</h4>
                             <div class="card mb-3">
                                 <div class="card-body">
                                     <div class="mb-3">
@@ -1020,18 +1034,37 @@
         </div>
     </div>
 
+    <!-- Modal Horarios -->
+    <div class="modal fade" id="horarioModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Horarios Disponibles</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Contenido se insertará dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    
+    <!-- Scripts personalizados -->
     <script src="js/script.js"></script>
     
     <script>
+        // Inicialización de DataTable
         $(document).ready(function() {
             $('#tablaRutas').DataTable();
         });
 
+        // Función para buscar rutas
         function buscarRutas() {
             const origen = document.getElementById('origen').value;
             const destino = document.getElementById('destino').value;
@@ -1046,6 +1079,40 @@
             const url = `rutas.html?origen=${encodeURIComponent(origen)}&destino=${encodeURIComponent(destino)}&fecha=${encodeURIComponent(fecha)}&pasajeros=${encodeURIComponent(pasajeros)}`;
             window.location.href = url;
         }
+
+        // Cargar rutas desde localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const rutasContainer = document.querySelector('#rutasContainer');
+            const rutas = JSON.parse(localStorage.getItem('rutas')) || [];
+
+            if (rutas.length === 0) {
+                rutasContainer.innerHTML = '<p class="text-center">No hay rutas disponibles.</p>';
+                return;
+            }
+
+            rutas.forEach(ruta => {
+                rutasContainer.innerHTML += `
+                    <div class="col-md-4">
+                        <article class="card ticket-card mb-4 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="badge bg-primary">Ruta</span>
+                                    <span class="text-muted">${ruta.horario}</span>
+                                </div>
+                                <h4>${ruta.origen} → ${ruta.destino}</h4>
+                                <p class="text-muted">Salida: ${ruta.horaSalida}</p>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <div>
+                                        <span class="h4">${ruta.precio}</span>
+                                        <span class="text-muted d-block">por persona</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                `;
+            });
+        });
     </script>
 </body>
 </html>
