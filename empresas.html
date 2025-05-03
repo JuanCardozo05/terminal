@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresas de Transporte | Terminal Transportes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Variables de color */
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --accent-color: #4cc9f0;
+  --dark-color: #1a1a2e;
+  --light-color: #f8f9fa;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --gray-light: #f8f9fa;
+  --gray-medium: #e9ecef;
+  --gray-dark: #6c757d;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+
+/* Sección de empresas */
+.section-title {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
+}
+
+/* Tarjetas de empresas - Estilo imagen arriba/contenido abajo */
+.company-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.company-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top-container {
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-light);
+  padding: 20px;
+}
+
+.card-img-top-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.company-card:hover .card-img-top-container img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.rating {
+  color: var(--warning-color);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.rating span {
+  color: var(--dark-color);
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.card-text {
+  color: var(--gray-dark);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.feature-list {
+  margin-top: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.feature-list li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.feature-list i {
+  margin-right: 8px;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .card-img-top-container {
+    height: 160px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .card-img-top-container {
+    height: 140px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .card-img-top-container {
+    height: 120px;
+    padding: 15px;
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-bus"></i> Terminal Transportes
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#rutas">Rutas y Horarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="empresas.html">Empresas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#noticias">Noticias</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Nuestras Empresas de Transporte</h2>
+    
+            <div class="row g-4">
+                <!-- Copetran -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="company-card animate-fadeIn">
+                        <div class="card-img-top-container">
+                            <img src="img/copetran.png" class="img-fluid" alt="Copetran">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Copetran</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5</span>
+                            </div>
+                            <p class="card-text">Copetran es una de las empresas líderes en transporte terrestre de pasajeros en Colombia.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle text-success"></i> WiFi a bordo</li>
+                                <li><i class="fas fa-check-circle text-success"></i> Asientos reclinables</li>
+                                <li><i class="fas fa-check-circle text-success"></i> Aire acondicionado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Expreso Brasilia -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="company-card animate-fadeIn delay-1">
+                        <div class="card-img-top-container">
+                            <img src="img/expreso-brasilia.png" class="img-fluid" alt="Expreso Brasilia">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Expreso Brasilia</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0</span>
+                            </div>
+                            <p class="card-text">Expreso Brasilia es sinónimo de confianza y puntualidad en el transporte.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle text-success"></i> Servicio VIP</li>
+                                <li><i class="fas fa-check-circle text-success"></i> Snacks incluidos</li>
+                                <li><i class="fas fa-check-circle text-success"></i> Entretenimiento</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Berlinas del Fonce -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="company-card animate-fadeIn delay-2">
+                        <div class="card-img-top-container">
+                            <img src="img/berlinas.png" class="img-fluid" alt="Berlinas del Fonce">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Berlinas del Fonce</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <p class="card-text">Especializada en rutas ejecutivas y de primera clase para viajeros exigentes.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle text-success"></i> Servicio ejecutivo</li>
+                                <li><i class="fas fa-check-circle text-success"></i> Atención personalizada</li>
+                                <li><i class="fas fa-check-circle text-success"></i> Seguro de viaje</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Expreso Bolivariano -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="company-card animate-fadeIn delay-3">
+                        <div class="card-img-top-container">
+                            <img src="img/bolivariano.png" class="img-fluid" alt="Expreso Bolivariano">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Expreso Bolivariano</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <p class="card-text">Reconocida por su amplia trayectoria y compromiso con la calidad.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle text-success"></i> Buses modernos</li>
+                                <li><i class="fas fa-check-circle text-success"></i> Personal capacitado</li>
+                                <li><i class="fas fa-check-circle text-success"></i> Rutas internacionales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

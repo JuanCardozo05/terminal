@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias | Terminal Transportes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-bus"></i> Terminal Transportes
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#rutas">Rutas y Horarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="empresas.html">Empresas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="noticias.html">Noticias</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="fw-bold">Últimas Noticias y Novedades</h1>
+                <p class="lead text-muted">Mantente informado sobre todas las actualizaciones de nuestra terminal</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Noticia 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card news-card h-100">
+                        <img src="img/nuevaruta.png" class="card-img-top" alt="Nueva Ruta">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Novedad</span>
+                            <h5 class="card-title">Lanzamiento de nueva ruta internacional</h5>
+                            <p class="card-text">A partir del próximo mes, tendremos conexión directa con el país vecino con salidas diarias. Esta nueva ruta facilitará el transporte internacional y fortalecerá lazos comerciales.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">15 Junio 2024</small>
+                                <a href="noticia-detalle.html?id=nueva-ruta" class="btn btn-outline-primary">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Noticia 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card news-card h-100">
+                        <img src="img/temporada-baja.png" class="card-img-top" alt="Promoción">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Promoción</span>
+                            <h5 class="card-title">Descuentos especiales por temporada baja</h5>
+                            <p class="card-text">Aprovecha hasta 30% de descuento en rutas seleccionadas durante este mes. Planifica tus viajes con anticipación y ahorra.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">1 Octubre 2024</small>
+                                <a href="noticia-detalle.html?id=temporada-baja" class="btn btn-outline-primary">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Noticia 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card news-card h-100">
+                        <img src="img/modernizacion.png" class="card-img-top" alt="Modernización">
+                        <div class="card-body">
+                            <span class="badge bg-info mb-2">Mejora</span>
+                            <h5 class="card-title">Modernización de nuestras plataformas</h5>
+                            <p class="card-text">Estamos renovando nuestras instalaciones para brindarte mayor comodidad y seguridad. Nuevas salas de espera y sistemas automatizados.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">20 Mayo 2024</small>
+                                <a href="noticia-detalle.html?id=modernizacion" class="btn btn-outline-primary">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Noticias adicionales -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card news-card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Tecnología</span>
+                            <h5 class="card-title">Nueva app móvil de la terminal</h5>
+                            <p class="card-text">Descarga nuestra nueva aplicación con funciones mejoradas: compra de tickets, consulta de horarios y notificaciones en tiempo real.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">5 Julio 2024</small>
+                                <a href="noticia-detalle.html?id=app-movil" class="btn btn-outline-primary">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card news-card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Sostenibilidad</span>
+                            <h5 class="card-title">Iniciativa verde en la terminal</h5>
+                            <p class="card-text">Nuevas medidas ecológicas: paneles solares y sistemas de reciclaje para reducir nuestra huella de carbono.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">10 Agosto 2024</small>
+                                <a href="noticia-detalle.html?id=iniciativa-verde" class="btn btn-outline-primary">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card news-card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Seguridad</span>
+                            <h5 class="card-title">Nuevos protocolos de seguridad</h5>
+                            <p class="card-text">Implementamos nuevas medidas de seguridad y monitoreo en tiempo real para garantizar viajes más seguros.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">25 Septiembre 2024</small>
+                                <a href="noticia-detalle.html?id=protocolos-seguridad" class="btn btn-outline-primary">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
